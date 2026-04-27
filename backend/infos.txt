@@ -1,0 +1,241 @@
+Showroom Auto Excellence
+------------------------------------------------------------
+
+Nom de la société : Auto Excellence Showroom
+Date de création : 12 mars 2018
+Fondateur : Monsieur Karim Ben Youssef
+Type d'entreprise : Société à responsabilité limitée (SARL)
+Capital social : 850 000 TND
+
+Localisation du siège :
+Adresse : Centre Urbain Nord, Rue des Affaires, Bloc A3, Tunis
+Pays : Tunisie
+Code postal : 1082
+Téléphone : +216 71 123 456
+Email : contact@auto-excellence.tn
+Site web : www.auto-excellence.tn
+
+Description générale :
+Auto Excellence est l'un des plus grands showrooms automobiles en Tunisie,
+spécialisé dans la vente, l'achat et la gestion de véhicules neufs et
+d'occasion. L'entreprise propose plus de 85 véhicules en permanence, répartis
+sur plusieurs catégories adaptées à tous les besoins des clients : citadines,
+SUV, berlines, véhicules utilitaires et voitures sportives.
+
+Nombre total de voitures disponibles : 40 véhicules
+Capacité du showroom : +/- 120 véhicules
+Taux de rotation mensuel : 25 à 30 véhicules vendus par mois
+
+------------------------------------------------------------
+MARQUES DISPONIBLES DANS LE SHOWROOM
+------------------------------------------------------------
+
+Marques européennes :
+- Peugeot (208, 308, 3008, 5008)
+- Renault (Clio 5, Megane, Kadjar)
+- Volkswagen (Golf 7, Tiguan, Passat)
+- BMW (Série 1, Série 3, X1, X3)
+- Mercedes-Benz (Classe A, Classe C, GLC)
+- Audi (A3, A4, Q3, Q5)
+- Fiat (Tipo, 500, Doblo)
+- Skoda (Fabia, Octavia, Superb)
+- Opel (Corsa, Astra, Insignia)
+- Citroën (C3, C4, C5 Aircross)
+- Mini (Cooper, Countryman)
+- Volvo (XC40, XC60, S60)
+- Jaguar (XE, F-Pace)
+- Alfa Romeo (Giulia, Stelvio)
+
+Marques asiatiques :
+- Toyota (Yaris, Corolla, CH-R, RAV4)
+- Hyundai (i10, i20, Tucson, Elantra)
+- Kia (Picanto, Rio, Sportage)
+- Nissan (Micra, Qashqai, X-Trail)
+- Honda (Civic, CR-V)
+- Mazda (CX-3, Mazda 3)
+- Suzuki (Swift, Vitara)
+- Mitsubishi (ASX, Outlander, L200)
+- Subaru (Impreza, Forester)
+- Lexus (IS, RX, ES, NX, UX)
+- Infiniti (Q30, QX50)
+- Acura (TLX, RDX)
+
+Marques américaines :
+- Ford (Fiesta, Focus, Kuga)
+- Jeep (Compass, Cherokee)
+- Chevrolet (Cruze, Captiva)
+- Dodge (Charger, Durango)
+- Ram (1500, 2500)
+- Tesla (Model 3, Model Y, Model S, Model X)
+- Buick (Enclave, Regal)
+
+Marques premium / luxe :
+- Porsche (Macan, Cayenne)
+- Land Rover (Range Rover Evoque, Discovery Sport)
+- Maserati (Ghibli, Levante)
+- Ferrari (Portofino, F8 Tributo)
+- Lamborghini (Huracan, Urus)
+- Bentley (Continental GT, Bentayga)
+- Rolls-Royce (Phantom, Ghost)
+- Aston Martin (Vantage, DBX)
+
+------------------------------------------------------------
+TYPES DE VÉHICULES PROPOSÉS
+------------------------------------------------------------
+- Citadines ultra économiques
+- Berlines pour familles
+- SUV et 4x4
+- Voitures sportives et haute performance
+- Véhicules utilitaires (pick-up, vans)
+- Voitures hybrides
+- Véhicules électriques (disponibilité limitée)
+
+------------------------------------------------------------
+SERVICES FOURNIS PAR LE SHOWROOM
+------------------------------------------------------------
+
+1. Vente de voitures neuves sous garantie constructeur
+2. Vente de voitures d'occasion sélectionnées et révisées
+3. Service de diagnostic mécanique complet
+4. Service d’entretien (vidange, freins, suspension, batterie)
+6. Financement via banques partenaires
+7. Leasing automobile pour entreprises et particuliers
+8. Service d’assurance automobile
+9. Reprise & estimation gratuite de véhicules
+10. Assistance administrative (carte grise, contrat, fiscalité)
+11. Livraison à domicile selon région
+12. Nettoyage & detailing automobile
+
+------------------------------------------------------------
+STATISTIQUES ET PERFORMANCES
+------------------------------------------------------------
+
+Nombre de ventes en 2023 : 312 véhicules
+Véhicules les plus vendus :
+- Peugeot 208
+- Renault Clio
+- Volkswagen Golf
+- Toyota Corolla
+- Hyundai i20
+
+Taux de satisfaction client : 94%
+Délai moyen de livraison : 24 à 72 heures
+Nombre de collaborateurs : 27 employés
+
+Équipe :
+- Directeur général : Karim Ben Youssef
+- Chef de vente : Amine Gharbi
+- Responsable mécanique : Sofien Trabelsi
+- Responsable financier : Ines Chikhaoui
+- Responsable relation client : Marwa Ayari
+
+------------------------------------------------------------
+PARTENAIRES FINANCIERS
+------------------------------------------------------------
+- Attijari Bank
+- BIAT
+- Amen Bank
+- Zitouna Bank
+- BNA Leasing
+- Attijari Leasing
+
+
+------------------------------------------------------------
+HORAIRES D’OUVERTURE
+------------------------------------------------------------
+Lundi - Samedi : 08h30 - 18h30
+Dimanche : Fermé
+Service urgence mécanique 24/7 disponible uniquement pour membres premium
+
+------------------------------------------------------------
+ENGAGEMENTS & QUALITÉ
+------------------------------------------------------------
+- Garantie minimum 6 mois sur véhicules d’occasion
+- Garantie 2 à 5 ans sur véhicules neufs
+- Contrôle qualité 120 points
+- Historique du véhicule vérifié
+- Transparence totale sur l’état mécanique
+
+
+------------------------------------------------------------
+NOUVELLES ANNONCES AJOUTÉES (pour le chatbot)
+------------------------------------------------------------
+
+[
+	{
+		"_id": "6935a987c5f35ecdaedb6f42",
+		"marque": "Volkswagen Passat",
+		"description": "Berline robuste, sécurité optimale, climatisation",
+		"prix": 11000,
+		"etat": "Occasion",
+		"kilometrage": 125000,
+		"carburant": "Diesel",
+		"image": "/assets/vol.jpg",
+		"images": [],
+		"annee": 2016,
+		"couleur": "Gris métal",
+		"transmission": "Manuelle",
+		"puissance": 130,
+		"portes": 5,
+		"siege": 5,
+		"__v": 0,
+		"createdAt": "2025-12-07T16:21:27.313+00:00",
+		"updatedAt": "2025-12-07T16:21:27.313+00:00"
+	},
+	{
+		"_id": "6935a987c5f35ecdaedb6f43",
+		"marque": "Toyota Verso",
+		"description": "Monospace 7 places, très spacieux et fiable",
+		"prix": 9800,
+		"etat": "Occasion",
+		"kilometrage": 156000,
+		"carburant": "Diesel",
+		"image": "/assets/toyo.jpg",
+		"images": [],
+		"annee": 2015,
+		"couleur": "noir",
+		"transmission": "Manuelle",
+		"puissance": 112,
+		"portes": 5,
+		"siege": 7,
+		"__v": 0,
+		"createdAt": "2025-12-07T16:21:27.313+00:00",
+		"updatedAt": "2025-12-07T16:21:27.313+00:00"
+	},
+	{
+		"_id": "6935a987c5f35ecdaedb6f44",
+		"marque": "Opel Astra",
+		"description": "Berline économe, parfait pour trajets quotidiens",
+		"prix": 7500,
+		"etat": "Occasion",
+		"kilometrage": 175000,
+		"carburant": "Diesel",
+		"image": "/assets/opel.jpg",
+		"images": [],
+		"annee": 2013,
+		"couleur": "Noir",
+		"transmission": "Manuelle",
+		"puissance": 100,
+		"portes": 5,
+		"siege": 5,
+		"__v": 0
+	},
+	{
+		"_id": "6935a987c5f35ecdaedb6f45",
+		"marque": "Mazda CX-5",
+		"description": "SUV élégant, traction intégrale, confortable",
+		"prix": 12500,
+		"etat": "Occasion",
+		"kilometrage": 108000,
+		"carburant": "Diesel",
+		"image": "/assets/mazda.jpg",
+		"images": [],
+		"annee": 2018,
+		"couleur": "Rouge",
+		"transmission": "Automatique",
+		"puissance": 150,
+		"portes": 5,
+		"siege": 5
+	}
+]
+

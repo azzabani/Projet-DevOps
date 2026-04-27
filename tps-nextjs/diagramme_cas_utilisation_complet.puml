@@ -1,0 +1,138 @@
+@startuml
+left to right direction
+
+actor Client
+actor Admin
+actor "Service IA chatbot" as IA
+actor "Système de paiement virtuel" as Paiement
+
+rectangle "Système Auto Excellence" {
+
+  ' --- Cas d'utilisation Client (sans connexion) ---
+  (Consulter page d'accueil) as UC1
+  (Utiliser le chatbot IA) as UC10
+
+  ' --- Cas d'utilisation Client (avec connexion) ---
+  (Se connecter) as UC5
+  (Créer un compte) as UC11
+  (Se déconnecter) as UC12
+  (Parcourir tous les véhicules) as UC2
+  (Voir détails d'un véhicule) as UC2a
+  (Créer une commande) as UC3
+  (Payer la commande - paiement virtuel) as UC4
+  (Consulter mes commandes) as UC6
+
+  ' --- Cas d'utilisation Admin ---
+  (Consulter Dashboard) as UC13
+  (Gérer les clients) as UC14
+  (Gérer les annonces) as UC7
+  (Gérer les ventes) as UC8
+
+  ' --- Détails des cas d'utilisation Client ---
+  (Poser questions détaillées) as UC10a
+  (Filtrer les véhicules) as UC2b
+  (Filtrer par Carburant) as UC2b1
+  (Filtrer par Marque) as UC2b2
+  (Consulter Description) as UC2a1
+  (Consulter Photo) as UC2a2
+  (Consulter caractéristique) as UC2a3
+
+  ' --- Détails des cas d'utilisation Admin ---
+  (Créer une annonce) as UC7a
+  (Modifier une annonce) as UC7b
+  (Supprimer une annonce) as UC7c
+  (Supprimer client) as UC14a
+  (Voir liste des commandes) as UC8a
+  (Changer statut commande) as UC8b
+  (Confirmé) as UC8b1
+  (En livraison) as UC8b2
+  (Livrés) as UC8b3
+}
+
+' --- Relations Client ---
+Client --> UC1
+Client --> UC10
+Client --> UC5
+Client --> UC11
+Client --> UC12
+Client --> UC2
+Client --> UC2a
+Client --> UC3
+Client --> UC6
+
+' Chatbot : scénario de base et extension optionnelle
+UC10 --> IA
+UC10a ..|> UC10 : <<extend>>
+
+' Parcourir tous les véhicules nécessite connexion
+UC2 --> UC5 : <<include>>
+
+' Parcourir inclut voir détails
+UC2 --> UC2a : <<include>>
+
+' Parcourir peut être étendu par filtres
+UC2 ..> UC2b : <<extend>>
+
+' Filtres : généralisation
+UC2b <|-- UC2b1
+UC2b <|-- UC2b2
+UC2b --> UC5 : <<include>>
+
+' Voir détails nécessite connexion
+UC2a --> UC5 : <<include>>
+
+' Voir détails : généralisation
+UC2a <|-- UC2a1
+UC2a <|-- UC2a2
+UC2a <|-- UC2a3
+
+' Voir détails peut mener à créer une commande
+UC2a ..> UC3 : <<extend>>
+
+' Créer un compte peut mener à se connecter (mais pas obligatoire)
+UC11 ..> UC5 : <<extend>>
+
+' Créer une commande nécessite connexion
+UC5 --> UC3 : <<include>>
+
+' Paiement inclus dans création de commande
+UC3 --> UC4 : <<include>>
+UC4 --> UC5 : <<include>>
+
+' Paiement virtuel externe
+UC4 --> Paiement
+
+' Consulter commandes nécessite connexion (INDÉPENDANT du paiement)
+UC5 --> UC6 : <<include>>
+
+' --- Relations Admin ---
+Admin --> UC13
+Admin --> UC14
+Admin --> UC7
+Admin --> UC8
+
+' Tous les cas d'utilisation admin nécessitent connexion
+UC5 --> UC13 : <<include>>
+UC5 --> UC14 : <<include>>
+UC5 --> UC7 : <<include>>
+UC5 --> UC8 : <<include>>
+
+' Détails de UC14 (Gérer les clients)
+UC14 --> UC14a : <<include>>
+
+' Détails de UC7 (Gérer les annonces)
+UC7 --> UC7a : <<include>>
+UC7 --> UC7b : <<include>>
+UC7 --> UC7c : <<include>>
+
+' Détails de UC8 (Gérer les ventes)
+UC8 --> UC8a : <<include>>
+UC8 --> UC8b : <<include>>
+
+' Changer statut : généralisation
+UC8b <|-- UC8b1
+UC8b <|-- UC8b2
+UC8b <|-- UC8b3
+
+@enduml
+

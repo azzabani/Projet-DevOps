@@ -1,0 +1,241 @@
+@startuml Diagramme de Classes - Auto Excellence Showroom
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam backgroundColor #F5E6D3
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #B8A082
+    ArrowColor #C9B8A3
+}
+
+title Diagramme de Classes - Auto Excellence Showroom
+
+' ============================================
+' MODÈLES DE DONNÉES (MongoDB/Mongoose)
+' ============================================
+
+package "Modèles de Données" {
+    class Product {
+        -_id: String
+        +marque: String
+        +description: String
+        +prix: Number
+        +etat: String
+        +kilometrage: Number
+        +carburant: String
+        +image: String
+        +images: String[]
+        +annee?: Number
+        +couleur?: String
+        +transmission?: String
+        +puissance?: Number
+        +portes?: Number
+        +siege?: Number
+        +createdAt: Date
+        +updatedAt: Date
+    }
+
+    class Commande {
+        -_id: String
+        +produitId: String
+        +marque: String
+        +prix: Number
+        +statut: String {default: "en_attente"}
+        +dateCommande: Date
+    }
+
+    class ClientInfo {
+        +nom: String
+        +prenom?: String
+        +email: String
+        +telephone: String
+        +adresse?: String
+        +ville?: String
+        +codePostal?: String
+    }
+
+    class User {
+        -_id: String
+        +prenom: String
+        +nom: String
+        +email: String
+        +password: String {hashed}
+        +role: String {enum: ["user", "admin"]}
+        +createdAt: Date
+        +updatedAt: Date
+        +comparePassword(password: String): Boolean
+    }
+
+    class Sale {
+        -_id: String
+        +carId: ObjectId
+        +clientName: String
+        +clientEmail: String
+        +price: Number
+        +soldAt: Date
+    }
+}
+
+' ============================================
+' COMPOSANTS REACT (Frontend)
+' ============================================
+
+package "Composants Frontend" {
+    class Navbar {
+        +links: Link[]
+        +isOpen: Boolean
+        +setIsOpen(Boolean): void
+        +render(): JSX.Element
+    }
+
+    class Footer {
+        +render(): JSX.Element
+    }
+
+    class HomePage {
+        +products: Product[]
+        +loading: Boolean
+        +fetchProducts(): void
+        +render(): JSX.Element
+    }
+
+    class ProductDetailsPage {
+        +product: Product
+        +loading: Boolean
+        +fetchProduct(id: String): void
+        +render(): JSX.Element
+    }
+
+    class CommandePage {
+        +product: Product
+        +formData: FormData
+        +errors: Object
+        +submitting: Boolean
+        +handleSubmit(): void
+        +validateForm(): Boolean
+        +render(): JSX.Element
+    }
+
+    class AdminDashboard {
+        +stats: Stats
+        +loading: Boolean
+        +fetchStats(): void
+        +render(): JSX.Element
+    }
+
+    class VentesPage {
+        +commandes: Commande[]
+        +loading: Boolean
+        +filtreStatut: String
+        +recherche: String
+        +updatingStatus: String
+        +fetchCommandes(): void
+        +handleStatusChange(id: String, statut: String): void
+        +render(): JSX.Element
+    }
+}
+
+' ============================================
+' ROUTES API (Backend)
+' ============================================
+
+package "Routes API" {
+    class ProductsAPI {
+        +GET(): Product[]
+        +POST(product: Product): Product
+        +GET(id: String): Product
+        +PUT(id: String, data: Object): Product
+        +DELETE(id: String): void
+    }
+
+    class CommandeAPI {
+        +POST(commande: Commande): Commande
+        +GET(email: String): Commande[]
+    }
+
+    class AdminCommandeAPI {
+        +PUT(id: String, statut: String): Commande
+    }
+
+    class AdminVentesAPI {
+        +GET(): Commande[]
+    }
+
+    class AdminStatsAPI {
+        +GET(): Stats
+    }
+
+    class AuthAPI {
+        +POST(credentials: Object): Token
+        +POST(user: User): User
+    }
+}
+
+' ============================================
+' TYPES ET INTERFACES
+' ============================================
+
+package "Types" {
+    class Stats {
+        +totalClients: Number
+        +totalAnnonces: Number
+        +annoncesDisponibles: Number
+        +annoncesVendues: Number
+        +totalVentes: Number
+        +totalRevenue: Number
+    }
+
+    class FormData {
+        +nom: String
+        +prenom: String
+        +email: String
+        +telephone: String
+        +adresse: String
+        +ville: String
+        +codePostal: String
+        +acceptConditions: Boolean
+    }
+}
+
+' ============================================
+' RELATIONS
+' ============================================
+
+Product "1" --> "*" Commande : produitId
+Commande "1" --> "1" ClientInfo : contient
+User "1" --> "*" Sale : buyerId
+Product "1" --> "*" Sale : carId
+
+HomePage --> Product : utilise
+ProductDetailsPage --> Product : affiche
+CommandePage --> Product : référence
+CommandePage --> Commande : crée
+VentesPage --> Commande : gère
+AdminDashboard --> Stats : affiche
+
+ProductsAPI --> Product : manipule
+CommandeAPI --> Commande : manipule
+AdminCommandeAPI --> Commande : modifie
+AdminVentesAPI --> Commande : récupère
+AdminStatsAPI --> Stats : génère
+AuthAPI --> User : authentifie
+
+note right of Product
+  Modèle principal représentant
+  un véhicule dans le showroom
+end note
+
+note right of Commande
+  Statut par défaut: "en_attente"
+  Peut être changé à "confirmée"
+  par l'admin
+end note
+
+note right of User
+  Password hashé avec bcrypt
+  avant sauvegarde
+end note
+
+@enduml
+
+
